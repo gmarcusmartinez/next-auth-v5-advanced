@@ -1,4 +1,4 @@
-import { LoginButton } from "@/components/auth/login-button"
+import { LoginButton } from "@/components/auth/login-button/login-button"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Poppins } from "next/font/google"
@@ -10,7 +10,7 @@ const font = Poppins({
 
 export default function Home() {
   return (
-    <main className="flex h-full flex-col items-center justify-center bg-main">
+    <main className="flex h-full flex-col items-center justify-center bg-app">
       <div className="space-y-6 text-center">
         <h1
           className={cn(

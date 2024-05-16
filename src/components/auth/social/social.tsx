@@ -9,7 +9,7 @@ export const Social = () => {
     <div className="flex items-center w-full gap-x-2">
       <Button
         size="lg"
-        className="w-full bg-[#3e3e42] border-0"
+        className="w-full bg-pop border-0 btn-press"
         variant="outline"
         onClick={() => {}}
       >
@@ -17,11 +17,11 @@ export const Social = () => {
       </Button>
       <Button
         size="lg"
-        className="w-full bg-[#3e3e42] border-0"
+        className="w-full bg-pop border-0 text-white hover:text-black btn-press"
         variant="outline"
         onClick={() => {}}
       >
-        <FaGithub className="h-5 w-5 text-white" />
+        <FaGithub className="h-5 w-5" />
       </Button>
     </div>
   )
