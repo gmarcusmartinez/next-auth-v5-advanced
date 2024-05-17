@@ -6,7 +6,8 @@ interface Props {
 
 export default function AuthLayout({ children }: Props) {
   return (
-    <div className="h-full flex items-center justify-center bg-app">
+    <div className="h-full flex flex-col items-center bg-app">
+      <div className="w-full h-16 bg-main mb-6 shadow-md" />
       {children}
     </div>
   )
