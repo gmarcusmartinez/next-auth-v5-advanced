@@ -1,17 +1,23 @@
 "use client"
 
+import { signIn } from "next-auth/react"
 import { Button } from "@/components/ui/button"
 import { FaGithub } from "react-icons/fa"
 import { FcGoogle } from "react-icons/fc"
+import { DEFAULT_LOGIN_REDIRECT } from "@/routes"
 
 export const Social = () => {
+  const onClick = (provider: "google" | "github") => {
+    signIn(provider, { callbackUrl: DEFAULT_LOGIN_REDIRECT })
+  }
+
   return (
     <div className="flex items-center w-full gap-x-2">
       <Button
         size="lg"
         className="w-full bg-pop border-0 btn-press"
         variant="outline"
-        onClick={() => {}}
+        onClick={() => onClick("google")}
       >
         <FcGoogle className="h-5 w-5" />
       </Button>
@@ -19,7 +25,7 @@ export const Social = () => {
         size="lg"
         className="w-full bg-pop border-0 text-white hover:text-black btn-press"
         variant="outline"
-        onClick={() => {}}
+        onClick={() => onClick("github")}
       >
         <FaGithub className="h-5 w-5" />
       </Button>
